@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle"; // Import tombol tadi
 
 export default function Navbar() {
   return (
@@ -7,7 +8,7 @@ export default function Navbar() {
         <Link to="/" className="text-xl font-bold text-blue-600">
           MY.DEV
         </Link>
-        <div className="flex gap-6 font-medium">
+        <div className="flex items-center gap-6 font-medium">
           <Link to="/" className="hover:text-blue-500 transition-colors">
             Home
           </Link>
@@ -20,6 +21,9 @@ export default function Navbar() {
           <Link to="/about" className="hover:text-blue-500 transition-colors">
             About
           </Link>
+
+          {/* Tambahkan Tombol di Sini */}
+          <ThemeToggle />
         </div>
       </div>
     </nav>

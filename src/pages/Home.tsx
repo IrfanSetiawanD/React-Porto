@@ -1,24 +1,34 @@
+import { Link } from "react-router-dom";
+
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[70vh] text-center space-y-6">
-      <h1 className="text-6xl font-extrabold tracking-tighter md:text-7xl">
-        Hi, I'm{" "}
-        <span className="bg-linear-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-          YourName
-        </span>
+    <section className="mx-auto max-w-4xl px-4 py-20 text-center">
+      {/* Judul dengan Gradient identik dengan Qwik */}
+      <h1 className="mb-6 bg-linear-to-r from-blue-500 to-purple-600 bg-clip-text text-5xl font-extrabold text-transparent md:text-7xl">
+        Web Developer & Creative Coder (REACT)
       </h1>
-      <p className="text-xl text-gray-600 dark:text-gray-400 max-w-[600px] leading-relaxed">
+
+      {/* Deskripsi */}
+      <p className="mb-10 text-xl text-gray-600 dark:text-gray-400">
         A passionate Frontend Developer specializing in building beautiful,
         functional, and high-performance web applications.
       </p>
-      <div className="flex gap-4">
-        <button className="px-8 py-3 bg-blue-600 text-white rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/30">
-          View Projects
-        </button>
-        <button className="px-8 py-3 border border-gray-200 dark:border-gray-800 rounded-full font-bold hover:bg-gray-50 dark:hover:bg-gray-900 transition-all">
-          Contact Me
-        </button>
+
+      {/* Tombol Aksi */}
+      <div className="flex justify-center gap-4">
+        <Link
+          to="/projects"
+          className="rounded-full bg-blue-600 px-8 py-3 font-bold text-white hover:bg-blue-700 transition-colors"
+        >
+          Lihat Project
+        </Link>
+        <Link
+          to="/about" // Di Qwik "/contact", sesuaikan dengan route yang kamu punya
+          className="rounded-full border border-blue-600 px-8 py-3 font-bold text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-800 transition-colors"
+        >
+          Hubungi Saya
+        </Link>
       </div>
-    </div>
+    </section>
   );
 }
