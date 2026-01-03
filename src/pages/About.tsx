@@ -18,7 +18,7 @@ export default function About() {
 
           <div className="relative w-56 h-56 rounded-2xl overflow-hidden bg-white dark:bg-gray-800 rotate-2 hover:rotate-0 transition-transform duration-500 shadow-xl">
             <img
-              src="https://picsum.photos/seed/dev/400/400"
+              src="https://picsum.photos/seed/person/400/400"
               alt="Profile"
               className="w-full h-full object-cover"
             />
@@ -30,10 +30,11 @@ export default function About() {
             Tentang <span className="text-blue-600 font-mono">Saya</span>
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-            Saya adalah seorang pengembang web yang senang membangun antarmuka
-            yang bersih dan fungsional. Setelah mengeksplorasi Qwik, kini saya
-            fokus mengembangkan ekosistem menggunakan **React Vite** dan
-            **Tailwind CSS v4** untuk fleksibilitas desain yang lebih maksimal.
+            Saya adalah seorang Fullstack Developer yang berfokus pada
+            pembangunan aplikasi web yang cepat, responsif, dan mudah digunakan.
+            Kini saya fokus mengembangkan ekosistem menggunakan **React Vite**
+            dan **Tailwind CSS v4** untuk fleksibilitas desain yang lebih
+            maksimal.
           </p>
         </div>
       </section>
