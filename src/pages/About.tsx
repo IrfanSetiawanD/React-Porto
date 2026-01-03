@@ -89,7 +89,7 @@ export default function About() {
           Punya ide proyek atau sekadar ingin menyapa?
         </p>
         <a
-          href="mailto:kamu@email.com"
+          href="mailto:setiawan.irfan89@gmail.com"
           className="inline-block px-10 py-4 bg-white text-blue-700 font-bold rounded-full hover:bg-gray-100 transition-all transform hover:scale-105 active:scale-95 shadow-lg"
         >
           Kirim Email
