@@ -26,7 +26,7 @@ export default function Navbar() {
           to="/"
           className="text-xl font-bold tracking-tighter hover:text-blue-500 transition-colors"
         >
-          DEV.PORTFOLIO
+          REACT.PORTFOLIO
         </Link>
 
         <div className="flex items-center gap-4 md:gap-8">
