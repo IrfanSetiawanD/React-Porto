@@ -2,9 +2,10 @@ import ReactMarkdown from "react-markdown";
 import { Link, useParams } from "react-router-dom";
 
 export default function BlogPost() {
-  const { slug } = useParams();
+  // Mengambil slug dari URL (misal: /blog/hello-world)
+  const { slug } = useParams<{ slug: string }>();
 
-  // Contoh konten markdown (nantinya bisa diambil dari file atau API)
+  // Konten artikel (Bisa dipindahkan ke file terpisah nantinya)
   const content = `
 # Memulai Perjalanan Web Dev dengan React
 
@@ -37,17 +38,37 @@ export default function Counter() {
   );
 }
 \`\`\`
+
+### Kesimpulan
+
+React mungkin menggunakan konsep **Hydration**, namun dengan optimasi yang tepat, performanya tetap luar biasa untuk kebutuhan web modern saat ini.
   `;
 
   return (
     <div className="mx-auto max-w-3xl px-6 py-12">
-      <article className="prose dark:prose-invert lg:prose-xl mb-10">
+      {/* Header Kecil Menggunakan Slug agar TypeScript Tidak Error */}
+      <header className="mb-8 border-b border-gray-100 dark:border-gray-800 pb-4">
+        <nav className="flex space-x-2 text-sm text-gray-500 mb-2">
+          <Link to="/blog" className="hover:text-blue-500">
+            Blog
+          </Link>
+          <span>/</span>
+          <span className="text-blue-500 font-medium truncate">{slug}</span>
+        </nav>
+      </header>
+
+      {/* Konten Utama */}
+      <article className="prose dark:prose-invert lg:prose-xl mb-10 max-w-none">
         <ReactMarkdown>{content}</ReactMarkdown>
       </article>
 
+      {/* Footer Navigasi */}
       <div className="border-t border-gray-200 pt-6 dark:border-gray-800">
-        <Link to="/blog" className="text-blue-500 hover:underline">
-          ← Kembali ke Blog
+        <Link
+          to="/blog"
+          className="text-blue-500 hover:underline flex items-center"
+        >
+          <span className="mr-2">←</span> Kembali ke Blog
         </Link>
       </div>
     </div>
